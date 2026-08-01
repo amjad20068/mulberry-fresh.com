@@ -1,0 +1,62 @@
+'use client';
+
+import { useCart } from '@/components/CartContext';
+import { products } from '@/data/products';
+import { ProductCard } from '@/components/ProductCard';
+
+export default function Home() {
+  const { searchQuery } = useCart();
+
+  const filterProducts = (category: 'beef' | 'mutton' | 'chicken') => {
+    return products[category].filter(p => p.name.toLowerCase().includes(searchQuery.toLowerCase()));
+  };
+
+  const renderGrid = (category: 'beef' | 'mutton' | 'chicken') => {
+    const filtered = filterProducts(category);
+    if (filtered.length === 0 && searchQuery !== '') {
+      return (
+        <p style={{ gridColumn: '1 / -1', textAlign: 'center', color: 'var(--text-muted)', padding: '2rem' }}>
+          No products match your search.
+        </p>
+      );
+    }
+    return filtered.map(p => <ProductCard key={p.id} product={p} category={category} />);
+  };
+
+  return (
+    <main className="container" style={{ paddingTop: '140px' }}>
+      {/* SECTION 1: FRESH BEEF */}
+      <section id="shop-beef" className="shop-section">
+        <div className="section-header">
+          <h2>Fresh Beef</h2>
+          <p>Premium cuts for the perfect meal</p>
+        </div>
+        <div className="product-grid" id="beef-grid">
+          {renderGrid('beef')}
+        </div>
+      </section>
+
+      {/* SECTION 2: FRESH MUTTON */}
+      <section id="shop-mutton" className="shop-section mt-lg">
+        <div className="section-header">
+          <h2>Premium Mutton</h2>
+          <p>Tender and rich in flavor</p>
+        </div>
+        <div className="product-grid" id="mutton-grid">
+          {renderGrid('mutton')}
+        </div>
+      </section>
+
+      {/* SECTION 3: FRESH CHICKEN */}
+      <section id="shop-chicken" className="shop-section mt-lg">
+        <div className="section-header">
+          <h2>Farm Fresh Chicken</h2>
+          <p>Hygienically processed and packed</p>
+        </div>
+        <div className="product-grid" id="chicken-grid">
+          {renderGrid('chicken')}
+        </div>
+      </section>
+    </main>
+  );
+}
