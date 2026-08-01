@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mulberry Fresh | Premium Halal Fresh Meat</title>
+    <meta name="description"
+        content="Premium Halal Fresh Meat Delivered Daily. Fresh Beef, Mutton, and Farm Fresh Chicken. Mulberry Fresh.">
+
+    <!-- Google Fonts: Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- BoxIcons for icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <!-- Using one of the provided logos. The user wants to replace "Fly with us" with "A Malabar Fresh". We can do this creatively if needed, but for now we'll just display the logo image. -->
+                <img src="assets/images/logo-transparent.png" alt="Mulberry Fresh Logo" class="brand-logo">
+            </a>
+
+            <div class="nav-links">
+                <a href="#" class="active">Home</a>
+                <a href="#shop-beef">Fresh Beef</a>
+                <a href="#shop-mutton">Fresh Mutton</a>
+                <a href="#shop-chicken">Fresh Chicken</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+            <div class="nav-actions">
+                <div class="search-box">
+                    <i class='bx bx-search'></i>
+                    <input type="text" id="search-input" placeholder="Search fresh meat...">
+                </div>
+                <a href="#" class="icon-link"><i class='bx bx-user'></i></a>
+                <a href="#" class="icon-link cart-icon" id="cart-toggle">
+                    <i class='bx bx-shopping-bag'></i>
+                    <span class="cart-badge">0</span>
+                </a>
+                <button class="mobile-menu-btn" id="mobile-menu-btn">
+                    <i class='bx bx-menu'></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="#" class="active">Home</a>
+        <a href="#shop-beef">Fresh Beef</a>
+        <a href="#shop-mutton">Fresh Mutton</a>
+        <a href="#shop-chicken">Fresh Chicken</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <!-- Main Content Container -->
+    <main class="container" style="padding-top: 140px;">
+
+        <!-- SECTION 1: FRESH BEEF -->
+        <section id="shop-beef" class="shop-section">
+            <div class="section-header">
+                <h2>Fresh Beef</h2>
+                <p>Premium cuts for the perfect meal</p>
+            </div>
+            <div class="product-grid" id="beef-grid">
+                <!-- Javascript will populate this -->
+            </div>
+        </section>
+
+        <!-- SECTION 2: FRESH MUTTON -->
+        <section id="shop-mutton" class="shop-section mt-lg">
+            <div class="section-header">
+                <h2>Premium Mutton</h2>
+                <p>Tender and rich in flavor</p>
+            </div>
+            <div class="product-grid" id="mutton-grid">
+                <!-- Javascript will populate this -->
+            </div>
+        </section>
+
+        <!-- SECTION 3: FRESH CHICKEN -->
+        <section id="shop-chicken" class="shop-section mt-lg">
+            <div class="section-header">
+                <h2>Farm Fresh Chicken</h2>
+                <p>Hygienically processed and packed</p>
+            </div>
+            <div class="product-grid" id="chicken-grid">
+                <!-- Javascript will populate this -->
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer mt-xl">
+        <div class="container footer-grid">
+            <div class="footer-col brand-col">
+                <img src="assets/images/logo-transparent.png" alt="Mulberry Fresh" class="footer-logo">
+                <p>Premium Halal fresh meat delivered straight to your door with utmost hygiene and care.</p>
+                <div class="social-links">
+                    <a href="#"><i class='bx bxl-facebook'></i></a>
+                    <a href="#"><i class='bx bxl-instagram'></i></a>
+                    <a href="#"><i class='bx bxl-whatsapp'></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <a href="#">Home</a>
+                <a href="#about">About Us</a>
+                <a href="#">Recipes</a>
+                <a href="#">Track Order</a>
+                <a href="#">My Account</a>
+            </div>
+            <div class="footer-col">
+                <h4>Categories</h4>
+                <a href="#shop-beef">Fresh Beef</a>
+                <a href="#shop-mutton">Premium Mutton</a>
+                <a href="#shop-chicken">Farm Fresh Chicken</a>
+                <a href="#">Marinades</a>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <p><i class='bx bxl-whatsapp'></i> +91 98765 43210</p>
+                <p><i class='bx bx-phone'></i> +91 98765 43211</p>
+                <p><i class='bx bx-envelope'></i> fresh@mulberry.com</p>
+                <p><i class='bx bx-map'></i> Kochi, Kerala, India</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Mulberry Fresh. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Side Cart (Shopping Cart) -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <aside class="side-cart" id="side-cart">
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <button class="close-cart" id="close-cart"><i class='bx bx-x'></i></button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Cart items will be rendered here via JS -->
+            <div class="empty-cart-message">
+                <i class='bx bx-shopping-bag'></i>
+                <p>Your cart is empty.</p>
+                <button class="btn btn-primary btn-block mt-sm"
+                    onclick="document.getElementById('close-cart').click()">Start Shopping</button>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-summary">
+                <div class="summary-line">
+                    <span>Subtotal</span>
+                    <span id="cart-subtotal">₹0.00</span>
+                </div>
+                <div class="summary-line">
+                    <span>Delivery Estimate</span>
+                    <span>Free</span>
+                </div>
+                <div class="summary-line total-line">
+                    <span>Total</span>
+                    <span class="total-price" id="cart-total">₹0.00</span>
+                </div>
+            </div>
+            <button class="btn btn-primary btn-block btn-checkout" id="checkout-btn">Proceed to Checkout</button>
+        </div>
+    </aside>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
