@@ -1,4 +1,5 @@
 @import 'tailwindcss';
+
 :root {
     /* Brand Colors */
     --primary-purple: #7a129d;
@@ -191,6 +192,14 @@ body {
 
 .search-box i {
     color: var(--text-muted);
+}
+
+.mobile-search-row {
+    display: none;
+}
+
+.desktop-search {
+    display: flex;
 }
 
 .icon-link {
@@ -818,7 +827,8 @@ body {
     right: -400px;
     width: 400px;
     max-width: 100%;
-    height: 100vh;
+    bottom: 0;
+
     background: white;
     z-index: 1001;
     box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
@@ -969,8 +979,18 @@ body {
     }
 
     .nav-links,
-    .search-box {
+    .desktop-search {
         display: none;
+    }
+
+    .mobile-search-row {
+        display: block;
+        padding: 0 16px 12px 16px;
+    }
+
+    .mobile-search-row .search-box {
+        width: 100%;
+        display: flex !important;
     }
 
     .mobile-menu-btn {
@@ -983,6 +1003,87 @@ body {
     }
 
     .product-grid {
-        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 16px;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .section-header h2 {
+        font-size: 2rem;
+    }
+
+    .cart-actions {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .qty-controls {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .btn-add-cart {
+        width: 100%;
+    }
+
+    .weight-selector {
+        justify-content: space-between;
+    }
+
+    /* Shrink product cards */
+    .product-card {
+        padding: 14px;
+    }
+
+    .product-image {
+        height: 150px;
+        margin-bottom: 15px;
+    }
+
+    .product-title {
+        font-size: 1.1rem;
+    }
+
+    /* Shrink cart section */
+    .side-cart {
+        width: 100%;
+        /* Take full width on very small screens */
+    }
+
+    .cart-header {
+        padding: 14px 16px;
+    }
+
+    .cart-items {
+        padding: 16px;
+    }
+
+    .cart-item {
+        margin-bottom: 15px;
+        padding-bottom: 15px;
+        gap: 12px;
+    }
+
+    .cart-item-img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .cart-footer {
+        padding: 16px;
+    }
+
+    .total-line {
+        margin-top: 10px;
+        padding-top: 10px;
+        font-size: 1.1rem;
     }
 }

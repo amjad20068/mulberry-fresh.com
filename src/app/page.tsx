@@ -23,6 +23,36 @@ export default function Home() {
     return filtered.map(p => <ProductCard key={p.id} product={p} category={category} />);
   };
 
+  if (searchQuery) {
+    const allProductsArray = [
+      ...products.beef.map(p => ({ ...p, category: 'beef' as const })),
+      ...products.mutton.map(p => ({ ...p, category: 'mutton' as const })),
+      ...products.chicken.map(p => ({ ...p, category: 'chicken' as const })),
+    ];
+
+    const searchResults = allProductsArray.filter(p => p.name.toLowerCase().includes(searchQuery.toLowerCase()));
+
+    return (
+      <main className="container" style={{ paddingTop: '140px', minHeight: '80vh' }}>
+        <section className="shop-section">
+          <div className="section-header">
+            <h2>Search Results</h2>
+            <p>Showing results for &quot;{searchQuery}&quot;</p>
+          </div>
+          {searchResults.length === 0 ? (
+            <p style={{ textAlign: 'center', color: 'var(--text-muted)', padding: '2rem' }}>
+              No products match your search.
+            </p>
+          ) : (
+            <div className="product-grid">
+              {searchResults.map(p => <ProductCard key={p.id} product={p} category={p.category} />)}
+            </div>
+          )}
+        </section>
+      </main>
+    );
+  }
+
   return (
     <main className="container" style={{ paddingTop: '140px' }}>
       {/* SECTION 1: FRESH BEEF */}

@@ -35,7 +35,7 @@ export function Navbar() {
                     </div>
 
                     <div className="nav-actions">
-                        <div className="search-box">
+                        <div className="search-box desktop-search">
                             <i className='bx bx-search'></i>
                             <input
                                 type="text"
@@ -60,9 +60,34 @@ export function Navbar() {
                         </button>
                     </div>
                 </div>
+
+                <div className="mobile-search-row">
+                    <div className="search-box">
+                        <i className='bx bx-search'></i>
+                        <input
+                            type="text"
+                            placeholder="Search beef, chicken, mutton..."
+                            value={searchQuery}
+                            onChange={(e) => setSearchQuery(e.target.value)}
+                            style={{ flex: 1, border: 'none', background: 'transparent', outline: 'none' }}
+                        />
+                    </div>
+                </div>
             </nav>
 
             <div className={`mobile-menu ${mobileMenuOpen ? 'active' : ''}`} id="mobile-menu">
+                <div className="mobile-search-wrapper" style={{ paddingBottom: '16px', borderBottom: '1px solid var(--border-color)', marginBottom: '8px' }}>
+                    <div className="search-box" style={{ display: 'flex', width: '100%', background: 'var(--bg-warm-white)' }}>
+                        <i className='bx bx-search'></i>
+                        <input
+                            type="text"
+                            placeholder="Search fresh meat..."
+                            value={searchQuery}
+                            onChange={(e) => setSearchQuery(e.target.value)}
+                            style={{ flex: 1, border: 'none', background: 'transparent', outline: 'none' }}
+                        />
+                    </div>
+                </div>
                 <a href="#" className="active" onClick={() => setMobileMenuOpen(false)}>Home</a>
                 <a href="#shop-beef" onClick={() => setMobileMenuOpen(false)}>Fresh Beef</a>
                 <a href="#shop-mutton" onClick={() => setMobileMenuOpen(false)}>Fresh Mutton</a>
