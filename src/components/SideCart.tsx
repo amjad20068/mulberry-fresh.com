@@ -7,6 +7,25 @@ export function SideCart() {
     const total = cart.reduce((sum, item) => sum + (item.pricePerKg * item.weight * item.qty), 0);
     const totalFormatted = total.toFixed(2);
 
+    const handleCheckout = () => {
+        if (cart.length === 0) return;
+
+        let message = "Hello Mulberry Fresh, I would like to place an order:\n\n";
+
+        cart.forEach((item, index) => {
+            const itemTotal = item.pricePerKg * item.weight * item.qty;
+            message += `${index + 1}. ${item.name} (${item.weight}kg) - Qty: ${item.qty} - ₹${itemTotal}\n`;
+        });
+
+        message += `\n*Total Amount: ₹${totalFormatted}*`;
+
+        // Add your WhatsApp number here (include country code, without + symbol)
+        const phoneNumber = "919000000000";
+        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+        window.open(whatsappUrl, '_blank');
+    };
+
     return (
         <>
             <div className={`cart-overlay ${isCartOpen ? 'active' : ''}`} id="cart-overlay" onClick={closeCart}></div>
@@ -63,7 +82,7 @@ export function SideCart() {
                             <span className="total-price" id="cart-total">₹{totalFormatted}</span>
                         </div>
                     </div>
-                    <button className="btn btn-primary btn-block btn-checkout" id="checkout-btn">Proceed to Checkout</button>
+                    <button className="btn btn-primary btn-block btn-checkout" id="checkout-btn" onClick={handleCheckout}>Proceed to Checkout</button>
                 </div>
             </aside>
         </>
