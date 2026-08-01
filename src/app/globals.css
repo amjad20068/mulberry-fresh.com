@@ -1028,10 +1028,14 @@ body {
     .qty-controls {
         width: 100%;
         justify-content: space-between;
+        height: 44px;
     }
 
     .btn-add-cart {
         width: 100%;
+        padding: 12px;
+        font-size: 1.1rem;
+        height: 48px;
     }
 
     .weight-selector {
@@ -1040,16 +1044,17 @@ body {
 
     /* Shrink product cards */
     .product-card {
-        padding: 14px;
+        padding: 12px;
     }
 
     .product-image {
-        height: 150px;
-        margin-bottom: 15px;
+        height: 135px;
+        margin-bottom: 10px;
     }
 
     .product-title {
-        font-size: 1.1rem;
+        font-size: 1rem;
+        margin-bottom: 8px;
     }
 
     /* Shrink cart section */
