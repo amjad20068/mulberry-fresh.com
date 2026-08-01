@@ -4,7 +4,7 @@ export const products = {
     beef: [
         { id: 'b1', name: 'Beef Curry Cut', price: 420, image: '/assets/images/beef-curry-cut.jpg', stock: true },
         { id: 'b2', name: 'Beef Biriyani Cut', price: 430, image: '/assets/images/beef-biriyani-cut-user-4k.png', stock: true },
-        { id: 'b3', name: 'Beef Mandi Cut', price: 450, image: '/assets/images/beef-mandi-cut.jpg', stock: true },
+        { id: 'b3', name: 'Beef Mandi Cut', price: 450, image: '/assets/images/beef-mandi-cut-user-new.jpg', stock: true },
         { id: 'b5', name: 'Beef Dry Fry', price: 480, image: '/assets/images/beef-dry-fry.jpg', stock: true },
         { id: 'b6', name: 'Beef Ribs', price: 500, image: '/assets/images/beef-ribs.png', stock: true },
         { id: 'b7', name: 'Beef Liver', price: 350, image: '/assets/images/beef-liver.jpg', stock: true },

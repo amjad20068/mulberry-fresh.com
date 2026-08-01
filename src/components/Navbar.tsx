@@ -21,16 +21,16 @@ export function Navbar() {
         <>
             <nav className="navbar" id="navbar" style={{ boxShadow: scrolled ? '0 4px 20px rgba(0,0,0,0.05)' : 'none' }}>
                 <div className="nav-container">
-                    <a href="#" className="logo">
+                    <a href="/" className="logo">
                         <img src="/assets/images/logo-transparent.png" alt="Mulberry Fresh Logo" className="brand-logo" />
                     </a>
 
                     <div className="nav-links">
-                        <a href="#" className="active">Home</a>
-                        <a href="#shop-beef">Fresh Beef</a>
-                        <a href="#shop-mutton">Fresh Mutton</a>
-                        <a href="#shop-chicken">Fresh Chicken</a>
-                        <a href="#about">About</a>
+                        <a href="/" className="active">Home</a>
+                        <a href="/#shop-beef">Fresh Beef</a>
+                        <a href="/#shop-mutton">Fresh Mutton</a>
+                        <a href="/#shop-chicken">Fresh Chicken</a>
+                        <a href="/about">About</a>
                         <a href="#contact">Contact</a>
                     </div>
 
@@ -88,11 +88,11 @@ export function Navbar() {
                         />
                     </div>
                 </div>
-                <a href="#" className="active" onClick={() => setMobileMenuOpen(false)}>Home</a>
-                <a href="#shop-beef" onClick={() => setMobileMenuOpen(false)}>Fresh Beef</a>
-                <a href="#shop-mutton" onClick={() => setMobileMenuOpen(false)}>Fresh Mutton</a>
-                <a href="#shop-chicken" onClick={() => setMobileMenuOpen(false)}>Fresh Chicken</a>
-                <a href="#about" onClick={() => setMobileMenuOpen(false)}>About</a>
+                <a href="/" className="active" onClick={() => setMobileMenuOpen(false)}>Home</a>
+                <a href="/#shop-beef" onClick={() => setMobileMenuOpen(false)}>Fresh Beef</a>
+                <a href="/#shop-mutton" onClick={() => setMobileMenuOpen(false)}>Fresh Mutton</a>
+                <a href="/#shop-chicken" onClick={() => setMobileMenuOpen(false)}>Fresh Chicken</a>
+                <a href="/about" onClick={() => setMobileMenuOpen(false)}>About</a>
                 <a href="#contact" onClick={() => setMobileMenuOpen(false)}>Contact</a>
             </div>
         </>

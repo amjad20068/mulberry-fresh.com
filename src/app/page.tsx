@@ -33,7 +33,7 @@ export default function Home() {
     const searchResults = allProductsArray.filter(p => p.name.toLowerCase().includes(searchQuery.toLowerCase()));
 
     return (
-      <main className="container" style={{ paddingTop: '140px', minHeight: '80vh' }}>
+      <main className="container main-content">
         <section className="shop-section">
           <div className="section-header">
             <h2>Search Results</h2>
@@ -54,39 +54,41 @@ export default function Home() {
   }
 
   return (
-    <main className="container" style={{ paddingTop: '140px' }}>
-      {/* SECTION 1: FRESH BEEF */}
-      <section id="shop-beef" className="shop-section">
-        <div className="section-header">
-          <h2>Fresh Beef</h2>
-          <p>Premium cuts for the perfect meal</p>
-        </div>
-        <div className="product-grid" id="beef-grid">
-          {renderGrid('beef')}
-        </div>
-      </section>
+    <>
+      <main className="container main-content">
+        {/* SECTION 1: FRESH BEEF */}
+        <section id="shop-beef" className="shop-section">
+          <div className="section-header">
+            <h2>Fresh Beef</h2>
+            <p>Premium cuts for the perfect meal</p>
+          </div>
+          <div className="product-grid" id="beef-grid">
+            {renderGrid('beef')}
+          </div>
+        </section>
 
-      {/* SECTION 2: FRESH MUTTON */}
-      <section id="shop-mutton" className="shop-section mt-lg">
-        <div className="section-header">
-          <h2>Premium Mutton</h2>
-          <p>Tender and rich in flavor</p>
-        </div>
-        <div className="product-grid" id="mutton-grid">
-          {renderGrid('mutton')}
-        </div>
-      </section>
+        {/* SECTION 2: FRESH MUTTON */}
+        <section id="shop-mutton" className="shop-section mt-lg">
+          <div className="section-header">
+            <h2>Premium Mutton</h2>
+            <p>Tender and rich in flavor</p>
+          </div>
+          <div className="product-grid" id="mutton-grid">
+            {renderGrid('mutton')}
+          </div>
+        </section>
 
-      {/* SECTION 3: FRESH CHICKEN */}
-      <section id="shop-chicken" className="shop-section mt-lg">
-        <div className="section-header">
-          <h2>Farm Fresh Chicken</h2>
-          <p>Hygienically processed and packed</p>
-        </div>
-        <div className="product-grid" id="chicken-grid">
-          {renderGrid('chicken')}
-        </div>
-      </section>
-    </main>
+        {/* SECTION 3: FRESH CHICKEN */}
+        <section id="shop-chicken" className="shop-section mt-lg">
+          <div className="section-header">
+            <h2>Farm Fresh Chicken</h2>
+            <p>Hygienically processed and packed</p>
+          </div>
+          <div className="product-grid" id="chicken-grid">
+            {renderGrid('chicken')}
+          </div>
+        </section>
+      </main>
+    </>
   );
 }
