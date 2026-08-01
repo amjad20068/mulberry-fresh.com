@@ -20,7 +20,7 @@ export function SideCart() {
         message += `\n*Total Amount: ₹${totalFormatted}*`;
 
         // Add your WhatsApp number here (include country code, without + symbol)
-        const phoneNumber = "919000000000";
+        const phoneNumber = "918075918850";
         const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
         window.open(whatsappUrl, '_blank');
