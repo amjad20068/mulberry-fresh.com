@@ -1,6 +1,7 @@
 'use client';
 import { useState, useEffect } from 'react';
 import { useCart } from './CartContext';
+import Link from 'next/link';
 
 export function Navbar() {
     const [scrolled, setScrolled] = useState(false);
@@ -24,17 +25,17 @@ export function Navbar() {
                     100% Halal Certified Premium Meat
                 </div>
                 <div className="nav-container">
-                    <a href="/" className="logo">
+                    <Link href="/" className="logo">
                         <img src="/assets/images/logo-transparent.png" alt="Mulberry Fresh Logo" className="brand-logo" />
-                    </a>
+                    </Link>
 
                     <div className="nav-links">
-                        <a href="/" className="active">Home</a>
-                        <a href="/#shop-beef">Fresh Beef</a>
-                        <a href="/#shop-mutton">Fresh Mutton</a>
-                        <a href="/#shop-chicken">Fresh Chicken</a>
-                        <a href="/about">About</a>
-                        <a href="#contact">Contact</a>
+                        <Link href="/" className="active">Home</Link>
+                        <Link href="/#shop-beef">Fresh Beef</Link>
+                        <Link href="/#shop-mutton">Fresh Mutton</Link>
+                        <Link href="/#shop-chicken">Fresh Chicken</Link>
+                        <Link href="/about">About</Link>
+                        <Link href="#contact">Contact</Link>
                     </div>
 
                     <div className="nav-actions">
@@ -91,12 +92,12 @@ export function Navbar() {
                         />
                     </div>
                 </div>
-                <a href="/" className="active" onClick={() => setMobileMenuOpen(false)}>Home</a>
-                <a href="/#shop-beef" onClick={() => setMobileMenuOpen(false)}>Fresh Beef</a>
-                <a href="/#shop-mutton" onClick={() => setMobileMenuOpen(false)}>Fresh Mutton</a>
-                <a href="/#shop-chicken" onClick={() => setMobileMenuOpen(false)}>Fresh Chicken</a>
-                <a href="/about" onClick={() => setMobileMenuOpen(false)}>About</a>
-                <a href="#contact" onClick={() => setMobileMenuOpen(false)}>Contact</a>
+                <Link href="/" className="active" onClick={() => setMobileMenuOpen(false)}>Home</Link>
+                <Link href="/#shop-beef" onClick={() => setMobileMenuOpen(false)}>Fresh Beef</Link>
+                <Link href="/#shop-mutton" onClick={() => setMobileMenuOpen(false)}>Fresh Mutton</Link>
+                <Link href="/#shop-chicken" onClick={() => setMobileMenuOpen(false)}>Fresh Chicken</Link>
+                <Link href="/about" onClick={() => setMobileMenuOpen(false)}>About</Link>
+                <Link href="#contact" onClick={() => setMobileMenuOpen(false)}>Contact</Link>
             </div>
         </>
     );
