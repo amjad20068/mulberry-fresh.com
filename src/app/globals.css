@@ -115,6 +115,16 @@ body {
 }
 
 /* Navigation */
+.top-bar-notice {
+    background: var(--secondary-green);
+    color: white;
+    text-align: center;
+    padding: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    width: 100%;
+}
+
 .navbar {
     position: fixed;
     top: 0;
@@ -386,21 +396,91 @@ body {
     text-align: center;
 }
 
+.category-banner {
+    position: relative;
+    padding: 60px 20px;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    margin-bottom: 40px;
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
+}
+
+@media (max-width: 768px) {
+    .logo img {
+        height: 50px;
+    }
+
+    .nav-actions {
+        gap: 10px;
+    }
+
+    .nav-actions .icon-link {
+        font-size: 1.2rem;
+    }
+
+    .category-banner {
+        aspect-ratio: 16 / 9;
+        min-height: auto;
+        padding: 20px;
+    }
+
+    .product-image {
+        height: 200px;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+}
+
+.category-banner-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.35;
+    z-index: 0;
+}
+
+.category-banner-content {
+    position: relative;
+    z-index: 1;
+    padding: 10px;
+}
+
+.category-banner-subtitle {
+    font-weight: 600;
+    color: var(--text-main);
+    margin: 0;
+    z-index: 1;
+    text-shadow: 0 2px 10px rgba(255, 255, 255, 0.9);
+}
+
 .section-header h2 {
     font-size: 2.8rem;
     margin-bottom: 15px;
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    background: linear-gradient(135deg, var(--primary-purple), #a832a8);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--primary-purple);
     position: relative;
     display: inline-block;
 }
 
 .section-header h2::after {
+
     content: '';
     position: absolute;
     bottom: -10px;
@@ -991,14 +1071,20 @@ body {
         display: none;
     }
 
+    .top-bar-notice {
+        padding: 4px;
+        font-size: 0.75rem;
+    }
+
     .mobile-search-row {
         display: block;
-        padding: 0 16px 12px 16px;
+        padding: 0 16px 8px 16px;
     }
 
     .mobile-search-row .search-box {
         width: 100%;
         display: flex !important;
+        padding: 6px 14px;
     }
 
     .mobile-menu-btn {
@@ -1006,16 +1092,17 @@ body {
     }
 
     .mobile-menu {
-        top: 185px;
+        top: 65px;
     }
 
     .main-content {
-        padding-top: 230px;
+        padding-top: 130px;
+        /* Safely push content completely below the fixed navbar */
         min-height: 80vh;
     }
 
     .hero {
-        margin-top: 185px;
+        margin-top: 130px;
     }
 
     .about-grid,
@@ -1023,8 +1110,53 @@ body {
         grid-template-columns: 1fr;
     }
 
+    .shop-section {
+        padding: 24px 0;
+    }
+
     .product-grid {
         grid-template-columns: 1fr;
+    }
+
+    /* Mobile Container Explicit Properties */
+    .container {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        overflow-x: hidden;
+        padding: 0 16px;
+    }
+
+    /* Header Mobile Adjustments */
+    .nav-container {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        padding: 4px 16px;
+    }
+
+    .logo img {
+        height: 35px;
+        /* Extremely compact logo for mobile */
+    }
+
+    .nav-actions {
+        gap: 12px;
+    }
+
+    .icon-link {
+        font-size: 1.25rem;
+    }
+
+    .cart-badge {
+        top: -4px;
+        right: -6px;
+        font-size: 0.65rem;
+    }
+
+    /* Product Card Adjustments */
+    .product-image {
+        height: 220px;
     }
 }
 
@@ -1038,10 +1170,12 @@ body {
     }
 
     .section-header h2 {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
-
+    .category-banner-subtitle {
+        font-size: 0.95rem;
+    }
 
     /* Shrink cart section */
     .side-cart {
@@ -1076,13 +1210,5 @@ body {
         margin-top: 10px;
         padding-top: 10px;
         font-size: 1.1rem;
-    }
-}
-/* iOS Safari aggressive fix for missing gradient text */
-@supports (-webkit-touch-callout: none) {
-    .section-header h2 {
-        background: none !important;
-        -webkit-text-fill-color: var(--primary-purple) !important;
-        color: var(--primary-purple) !important;
     }
 }

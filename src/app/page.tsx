@@ -58,31 +58,11 @@ export default function Home() {
       <main className="container main-content">
         {/* SECTION 1: FRESH BEEF */}
         <section id="shop-beef" className="shop-section">
-          <div className="section-header" style={{
-            position: 'relative',
-            padding: '60px 20px',
-            borderRadius: 'var(--radius-lg)',
-            overflow: 'hidden',
-            marginBottom: '40px',
-            border: '1px solid var(--border-color)',
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center',
-            alignItems: 'center',
-            minHeight: '300px'
-          }}>
-            <div style={{
-              position: 'absolute',
-              top: 0, left: 0, right: 0, bottom: 0,
-              backgroundImage: 'url(/assets/images/beef_bg.png)',
-              backgroundSize: 'cover',
-              backgroundPosition: 'center 65%',
-              opacity: 0.35,
-              zIndex: 0
-            }}></div>
-            <div style={{ position: 'relative', zIndex: 1, padding: '10px' }}>
+          <div className="section-header category-banner">
+            <div className="category-banner-bg" style={{ backgroundImage: 'url(/assets/images/beef_bg.png)', backgroundPosition: 'center 65%' }}></div>
+            <div className="category-banner-content">
               <h2 style={{ marginBottom: '8px', zIndex: 1 }}>Fresh Beef</h2>
-              <p style={{ fontWeight: 600, color: 'var(--text-main)', margin: 0, zIndex: 1, textShadow: '0 2px 10px rgba(255,255,255,0.9)' }}>Premium cuts for the perfect meal</p>
+              <p className="category-banner-subtitle">Premium cuts for the perfect meal</p>
             </div>
           </div>
           <div className="product-grid" id="beef-grid">
@@ -92,31 +72,11 @@ export default function Home() {
 
         {/* SECTION 2: FRESH MUTTON */}
         <section id="shop-mutton" className="shop-section mt-lg">
-          <div className="section-header" style={{
-            position: 'relative',
-            padding: '60px 20px',
-            borderRadius: 'var(--radius-lg)',
-            overflow: 'hidden',
-            marginBottom: '40px',
-            border: '1px solid var(--border-color)',
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center',
-            alignItems: 'center',
-            minHeight: '300px'
-          }}>
-            <div style={{
-              position: 'absolute',
-              top: 0, left: 0, right: 0, bottom: 0,
-              backgroundImage: 'url(/assets/images/mutton_bg.png)',
-              backgroundSize: 'cover',
-              backgroundPosition: 'center 60%',
-              opacity: 0.35,
-              zIndex: 0
-            }}></div>
-            <div style={{ position: 'relative', zIndex: 1, padding: '10px' }}>
+          <div className="section-header category-banner">
+            <div className="category-banner-bg" style={{ backgroundImage: 'url(/assets/images/mutton_bg.png)', backgroundPosition: 'center 60%' }}></div>
+            <div className="category-banner-content">
               <h2 style={{ marginBottom: '8px', zIndex: 1 }}>Premium Mutton</h2>
-              <p style={{ fontWeight: 600, color: 'var(--text-main)', margin: 0, zIndex: 1, textShadow: '0 2px 10px rgba(255,255,255,0.9)' }}>Tender and rich in flavor</p>
+              <p className="category-banner-subtitle">Tender and rich in flavor</p>
             </div>
           </div>
           <div className="product-grid" id="mutton-grid">
@@ -126,31 +86,11 @@ export default function Home() {
 
         {/* SECTION 3: FRESH CHICKEN */}
         <section id="shop-chicken" className="shop-section mt-lg">
-          <div className="section-header" style={{
-            position: 'relative',
-            padding: '60px 20px',
-            borderRadius: 'var(--radius-lg)',
-            overflow: 'hidden',
-            marginBottom: '40px',
-            border: '1px solid var(--border-color)',
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center',
-            alignItems: 'center',
-            minHeight: '300px'
-          }}>
-            <div style={{
-              position: 'absolute',
-              top: 0, left: 0, right: 0, bottom: 0,
-              backgroundImage: 'url(/assets/images/chicken_bg.png)',
-              backgroundSize: 'cover',
-              backgroundPosition: 'center 60%',
-              opacity: 0.35,
-              zIndex: 0
-            }}></div>
-            <div style={{ position: 'relative', zIndex: 1, padding: '10px' }}>
+          <div className="section-header category-banner">
+            <div className="category-banner-bg" style={{ backgroundImage: 'url(/assets/images/chicken_bg.png)', backgroundPosition: 'center 60%' }}></div>
+            <div className="category-banner-content">
               <h2 style={{ marginBottom: '8px', zIndex: 1 }}>Farm Fresh Chicken</h2>
-              <p style={{ fontWeight: 600, color: 'var(--text-main)', margin: 0, zIndex: 1, textShadow: '0 2px 10px rgba(255,255,255,0.9)' }}>Hygienically processed and packed</p>
+              <p className="category-banner-subtitle">Hygienically processed and packed</p>
             </div>
           </div>
           <div className="product-grid" id="chicken-grid">

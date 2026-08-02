@@ -21,7 +21,7 @@ export function Navbar() {
     return (
         <>
             <nav className="navbar" id="navbar" style={{ boxShadow: scrolled ? '0 4px 20px rgba(0,0,0,0.05)' : 'none' }}>
-                <div style={{ background: 'var(--secondary-green)', color: 'white', textAlign: 'center', padding: '6px', fontSize: '0.85rem', fontWeight: 600, width: '100%' }}>
+                <div className="top-bar-notice">
                     100% Halal Certified Premium Meat
                 </div>
                 <div className="nav-container">
@@ -62,19 +62,6 @@ export function Navbar() {
                         <button className="mobile-menu-btn" id="mobile-menu-btn" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
                             <i className={mobileMenuOpen ? 'bx bx-x' : 'bx bx-menu'}></i>
                         </button>
-                    </div>
-                </div>
-
-                <div className="mobile-search-row">
-                    <div className="search-box">
-                        <i className='bx bx-search'></i>
-                        <input
-                            type="text"
-                            placeholder="Search beef, chicken, mutton..."
-                            value={searchQuery}
-                            onChange={(e) => setSearchQuery(e.target.value)}
-                            style={{ flex: 1, border: 'none', background: 'transparent', outline: 'none' }}
-                        />
                     </div>
                 </div>
             </nav>
