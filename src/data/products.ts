@@ -14,21 +14,21 @@ export const products = {
     mutton: [
         { id: 'm1', name: 'Mutton Curry Cut', price: 850, image: '/assets/images/mutton-curry-cut.jpg?v=1785679955', stock: true },
         { id: 'm2', name: 'Mutton Biriyani Cut', price: 860, image: '/assets/images/mutton-biriyani-cut.jpg?v=1785680069', stock: true },
-        { id: 'm3', name: 'Mutton Mandi Cut', price: 880, image: '/assets/images/mutton-mandi-cut.jpg', stock: true }
+        { id: 'm3', name: 'Mutton Mandi Cut', price: 880, image: '/assets/images/mutton-mandi-cut.jpg?v=1785689575', stock: true }
     ],
     chicken: [
-        { id: 'c1', name: 'Chicken Curry Cut', price: 260, image: '/assets/images/chicken-curry-cut.png', stock: true },
-        { id: 'c2', name: 'Chicken Biriyani Cut', price: 270, image: '/assets/images/chicken-biriyani-cut.png', stock: true },
-        { id: 'c3', name: 'Chicken Mandi Cut', price: 280, image: '/assets/images/chicken-mandi-cut.png', stock: true },
-        { id: 'c4', name: 'Chicken Alfaham Cut', price: 290, image: '/assets/images/chicken-alfaham-cut.jpg', stock: true },
-        { id: 'c5', name: 'Chicken Leg (With Skin)', price: 300, image: '/assets/images/chicken-leg-skin.jpg', stock: true },
-        { id: 'c6', name: 'Chicken Leg (Skinless)', price: 320, image: '/assets/images/chicken-leg-skinless.jpg', stock: true },
-        { id: 'c7', name: 'Whole Chicken (With Skin)', price: 240, image: '/assets/images/whole-chicken-skin.jpg', stock: true },
-        { id: 'c8', name: 'Whole Chicken (Skinless)', price: 260, image: '/assets/images/whole-chicken-skinless.jpg', stock: true },
-        { id: 'c9', name: 'Chicken Wings (With Skin)', price: 280, image: '/assets/images/chicken-wings-skin.jpg', stock: true },
-        { id: 'c10', name: 'Chicken Wings (Skinless)', price: 300, image: '/assets/images/chicken-wings-skinless.jpg', stock: true },
-        { id: 'c11', name: 'Chicken Gizzard', price: 180, image: '/assets/images/chicken-gizzard.jpg', stock: true },
-        { id: 'c12', name: 'Chicken Breast (With Skin)', price: 350, image: '/assets/images/chicken-breast-skin.jpg', stock: true },
-        { id: 'c13', name: 'Chicken Breast (Skinless)', price: 380, image: '/assets/images/chicken-breast-skinless.jpg', stock: true }
+        { id: 'c1', name: 'Chicken Curry Cut', price: 260, image: '/assets/images/chicken-curry-cut.png?v=1785689622', stock: true },
+        { id: 'c2', name: 'Chicken Biriyani Cut', price: 270, image: '/assets/images/chicken-biriyani-cut.png?v=1785689770', stock: true },
+        { id: 'c3', name: 'Chicken Mandi Cut', price: 280, image: '/assets/images/chicken-mandi-cut.jpg?v=1785689944', stock: true },
+        { id: 'c4', name: 'Chicken Alfaham Cut', price: 290, image: '/assets/images/chicken-alfaham-cut.jpg?v=1785690069', stock: true },
+        { id: 'c5', name: 'Chicken Leg (With Skin)', price: 300, image: '/assets/images/chicken-leg-skin.jpg?v=1785690231', stock: true },
+        { id: 'c6', name: 'Chicken Leg (Skinless)', price: 320, image: '/assets/images/chicken-leg-skinless.jpg?v=1785690331', stock: true },
+        { id: 'c7', name: 'Whole Chicken (With Skin)', price: 240, image: '/assets/images/whole-chicken-skin.jpg?v=1785690493', stock: true },
+        { id: 'c8', name: 'Whole Chicken (Skinless)', price: 260, image: '/assets/images/whole-chicken-skinless.jpg?v=1785690652', stock: true },
+        { id: 'c9', name: 'Chicken Wings (With Skin)', price: 280, image: '/assets/images/chicken-wings-skin.jpg?v=1785690778', stock: true },
+        { id: 'c10', name: 'Chicken Wings (Skinless)', price: 300, image: '/assets/images/chicken-wings-skinless.jpg?v=1785690927', stock: true },
+        { id: 'c11', name: 'Chicken Gizzard', price: 180, image: '/assets/images/chicken-gizzard.jpg?v=1785691092', stock: true },
+        { id: 'c12', name: 'Chicken Breast (With Skin)', price: 350, image: '/assets/images/chicken-breast-skin.jpg?v=1785691203', stock: true },
+        { id: 'c13', name: 'Chicken Breast (Skinless)', price: 380, image: '/assets/images/chicken-breast-skinless.jpg?v=1785691403', stock: true }
     ]
 };
