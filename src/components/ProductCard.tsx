@@ -32,7 +32,6 @@ export function ProductCard({ product, category }: { product: Product; category:
     return (
         <div className="product-card" data-id={product.id}>
             <div className="product-badges">
-                <span className="badge-halal">Halal</span>
                 <button
                     className="btn-wishlist"
                     onClick={() => toggleWishlist(product.id)}

@@ -239,7 +239,7 @@ body {
     display: none;
     flex-direction: column;
     position: fixed;
-    top: 111px;
+    top: 137px;
     left: 0;
     width: 100%;
     background: white;
@@ -263,7 +263,7 @@ body {
 /* Hero Section */
 .hero {
     position: relative;
-    margin-top: 111px;
+    margin-top: 137px;
     height: 90vh;
     min-height: 600px;
     display: flex;
@@ -484,7 +484,7 @@ body {
 .product-image {
     width: 100%;
     height: 280px;
-    object-fit: cover;
+    object-fit: contain;
     border-radius: var(--radius-md);
     margin-bottom: 16px;
     transition: var(--transition-smooth);
@@ -888,7 +888,7 @@ body {
 .cart-item-img {
     width: 80px;
     height: 80px;
-    object-fit: cover;
+    object-fit: contain;
     border-radius: 8px;
 }
 
@@ -964,7 +964,7 @@ body {
 
 /* Main Content Wrapper */
 .main-content {
-    padding-top: 140px;
+    padding-top: 166px;
     min-height: 80vh;
 }
 
@@ -1006,16 +1006,16 @@ body {
     }
 
     .mobile-menu {
-        top: 159px;
+        top: 185px;
     }
 
     .main-content {
-        padding-top: 180px;
+        padding-top: 206px;
         min-height: 80vh;
     }
 
     .hero {
-        margin-top: 159px;
+        margin-top: 185px;
     }
 
     .about-grid,
@@ -1041,44 +1041,7 @@ body {
         font-size: 2rem;
     }
 
-    .cart-actions {
-        flex-direction: row;
-        gap: 8px;
-    }
 
-    .qty-controls {
-        width: auto;
-        height: 38px;
-        /* Match add button height */
-    }
-
-    .btn-add-cart {
-        flex: 1;
-        padding: 8px;
-        font-size: 0.9rem;
-        height: 38px;
-    }
-
-    .weight-selector {
-        justify-content: space-between;
-    }
-
-    /* Shrink product cards */
-    .product-card {
-        padding: 12px;
-    }
-
-    .product-image {
-        height: auto;
-        aspect-ratio: 1/1;
-        /* Perfect square matching the new image they uploaded */
-        margin-bottom: 12px;
-    }
-
-    .product-title {
-        font-size: 1rem;
-        margin-bottom: 8px;
-    }
 
     /* Shrink cart section */
     .side-cart {

@@ -20,6 +20,9 @@ export function Navbar() {
     return (
         <>
             <nav className="navbar" id="navbar" style={{ boxShadow: scrolled ? '0 4px 20px rgba(0,0,0,0.05)' : 'none' }}>
+                <div style={{ background: 'var(--secondary-green)', color: 'white', textAlign: 'center', padding: '6px', fontSize: '0.85rem', fontWeight: 600, width: '100%' }}>
+                    100% Halal Certified Premium Meat
+                </div>
                 <div className="nav-container">
                     <a href="/" className="logo">
                         <img src="/assets/images/logo-transparent.png" alt="Mulberry Fresh Logo" className="brand-logo" />
