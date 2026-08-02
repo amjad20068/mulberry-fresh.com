@@ -12,8 +12,8 @@ export const products = {
         { id: 'b10', name: 'Beef Boneless', price: 480, image: '/assets/images/beef-boneless.jpg?v=2', stock: true }
     ],
     mutton: [
-        { id: 'm1', name: 'Mutton Curry Cut', price: 850, image: '/assets/images/mutton-curry-cut.jpg', stock: true },
-        { id: 'm2', name: 'Mutton Biriyani Cut', price: 860, image: '/assets/images/mutton-biriyani-cut.jpg', stock: true },
+        { id: 'm1', name: 'Mutton Curry Cut', price: 850, image: '/assets/images/mutton-curry-cut.jpg?v=1785679955', stock: true },
+        { id: 'm2', name: 'Mutton Biriyani Cut', price: 860, image: '/assets/images/mutton-biriyani-cut.jpg?v=1785680069', stock: true },
         { id: 'm3', name: 'Mutton Mandi Cut', price: 880, image: '/assets/images/mutton-mandi-cut.jpg', stock: true }
     ],
     chicken: [
