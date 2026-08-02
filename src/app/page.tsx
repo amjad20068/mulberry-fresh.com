@@ -69,7 +69,7 @@ export default function Home() {
             flexDirection: 'column',
             justifyContent: 'center',
             alignItems: 'center',
-            minHeight: '260px'
+            minHeight: '300px'
           }}>
             <div style={{
               position: 'absolute',
@@ -80,9 +80,9 @@ export default function Home() {
               opacity: 0.35,
               zIndex: 0
             }}></div>
-            <div style={{ position: 'relative', zIndex: 1, textShadow: '0 2px 10px rgba(255,255,255,0.9)', padding: '10px' }}>
+            <div style={{ position: 'relative', zIndex: 1, padding: '10px' }}>
               <h2 style={{ marginBottom: '8px', zIndex: 1 }}>Fresh Beef</h2>
-              <p style={{ fontWeight: 600, color: 'var(--text-main)', margin: 0, zIndex: 1 }}>Premium cuts for the perfect meal</p>
+              <p style={{ fontWeight: 600, color: 'var(--text-main)', margin: 0, zIndex: 1, textShadow: '0 2px 10px rgba(255,255,255,0.9)' }}>Premium cuts for the perfect meal</p>
             </div>
           </div>
           <div className="product-grid" id="beef-grid">
@@ -103,7 +103,7 @@ export default function Home() {
             flexDirection: 'column',
             justifyContent: 'center',
             alignItems: 'center',
-            minHeight: '260px'
+            minHeight: '300px'
           }}>
             <div style={{
               position: 'absolute',
@@ -114,9 +114,9 @@ export default function Home() {
               opacity: 0.35,
               zIndex: 0
             }}></div>
-            <div style={{ position: 'relative', zIndex: 1, textShadow: '0 2px 10px rgba(255,255,255,0.9)', padding: '10px' }}>
+            <div style={{ position: 'relative', zIndex: 1, padding: '10px' }}>
               <h2 style={{ marginBottom: '8px', zIndex: 1 }}>Premium Mutton</h2>
-              <p style={{ fontWeight: 600, color: 'var(--text-main)', margin: 0, zIndex: 1 }}>Tender and rich in flavor</p>
+              <p style={{ fontWeight: 600, color: 'var(--text-main)', margin: 0, zIndex: 1, textShadow: '0 2px 10px rgba(255,255,255,0.9)' }}>Tender and rich in flavor</p>
             </div>
           </div>
           <div className="product-grid" id="mutton-grid">
@@ -137,7 +137,7 @@ export default function Home() {
             flexDirection: 'column',
             justifyContent: 'center',
             alignItems: 'center',
-            minHeight: '260px'
+            minHeight: '300px'
           }}>
             <div style={{
               position: 'absolute',
@@ -148,9 +148,9 @@ export default function Home() {
               opacity: 0.35,
               zIndex: 0
             }}></div>
-            <div style={{ position: 'relative', zIndex: 1, textShadow: '0 2px 10px rgba(255,255,255,0.9)', padding: '10px' }}>
+            <div style={{ position: 'relative', zIndex: 1, padding: '10px' }}>
               <h2 style={{ marginBottom: '8px', zIndex: 1 }}>Farm Fresh Chicken</h2>
-              <p style={{ fontWeight: 600, color: 'var(--text-main)', margin: 0, zIndex: 1 }}>Hygienically processed and packed</p>
+              <p style={{ fontWeight: 600, color: 'var(--text-main)', margin: 0, zIndex: 1, textShadow: '0 2px 10px rgba(255,255,255,0.9)' }}>Hygienically processed and packed</p>
             </div>
           </div>
           <div className="product-grid" id="chicken-grid">

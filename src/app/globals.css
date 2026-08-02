@@ -1010,7 +1010,7 @@ body {
     }
 
     .main-content {
-        padding-top: 206px;
+        padding-top: 230px;
         min-height: 80vh;
     }
 
@@ -1076,5 +1076,13 @@ body {
         margin-top: 10px;
         padding-top: 10px;
         font-size: 1.1rem;
+    }
+}
+/* iOS Safari aggressive fix for missing gradient text */
+@supports (-webkit-touch-callout: none) {
+    .section-header h2 {
+        background: none !important;
+        -webkit-text-fill-color: var(--primary-purple) !important;
+        color: var(--primary-purple) !important;
     }
 }
