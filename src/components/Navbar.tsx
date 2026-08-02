@@ -6,6 +6,7 @@ import Link from 'next/link';
 export function Navbar() {
     const [scrolled, setScrolled] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const [mobileSearchOpen, setMobileSearchOpen] = useState(false);
     const { cart, openCart, searchQuery, setSearchQuery } = useCart();
 
     useEffect(() => {
@@ -49,7 +50,10 @@ export function Navbar() {
                                 onChange={(e) => setSearchQuery(e.target.value)}
                             />
                         </div>
-                        <a href="#" className="icon-link"><i className='bx bx-user'></i></a>
+                        <a href="#" className="icon-link" aria-label="User account"><i className='bx bx-user'></i></a>
+                        <button className="mobile-search-btn" onClick={() => setMobileSearchOpen(!mobileSearchOpen)}>
+                            <i className='bx bx-search'></i>
+                        </button>
                         <a
                             href="#"
                             className="icon-link cart-icon"
@@ -64,21 +68,24 @@ export function Navbar() {
                         </button>
                     </div>
                 </div>
+
+                {mobileSearchOpen && (
+                    <div className="mobile-search-row">
+                        <div className="search-box">
+                            <i className='bx bx-search'></i>
+                            <input
+                                type="text"
+                                placeholder="Search beef, chicken, mutton..."
+                                value={searchQuery}
+                                onChange={(e) => setSearchQuery(e.target.value)}
+                                style={{ flex: 1, border: 'none', background: 'transparent', outline: 'none' }}
+                            />
+                        </div>
+                    </div>
+                )}
             </nav>
 
             <div className={`mobile-menu ${mobileMenuOpen ? 'active' : ''}`} id="mobile-menu">
-                <div className="mobile-search-wrapper" style={{ paddingBottom: '16px', borderBottom: '1px solid var(--border-color)', marginBottom: '8px' }}>
-                    <div className="search-box" style={{ display: 'flex', width: '100%', background: 'var(--bg-warm-white)' }}>
-                        <i className='bx bx-search'></i>
-                        <input
-                            type="text"
-                            placeholder="Search fresh meat..."
-                            value={searchQuery}
-                            onChange={(e) => setSearchQuery(e.target.value)}
-                            style={{ flex: 1, border: 'none', background: 'transparent', outline: 'none' }}
-                        />
-                    </div>
-                </div>
                 <Link href="/" className="active" onClick={() => setMobileMenuOpen(false)}>Home</Link>
                 <Link href="/#shop-beef" onClick={() => setMobileMenuOpen(false)}>Fresh Beef</Link>
                 <Link href="/#shop-mutton" onClick={() => setMobileMenuOpen(false)}>Fresh Mutton</Link>

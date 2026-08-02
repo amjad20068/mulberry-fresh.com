@@ -245,6 +245,15 @@ body {
     color: var(--text-main);
 }
 
+.mobile-search-btn {
+    display: none;
+    font-size: 1.45rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-main);
+}
+
 .mobile-menu {
     display: none;
     flex-direction: column;
@@ -1087,7 +1096,8 @@ body {
         padding: 6px 14px;
     }
 
-    .mobile-menu-btn {
+    .mobile-menu-btn,
+    .mobile-search-btn {
         display: block;
     }
 
